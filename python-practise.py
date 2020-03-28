@@ -113,5 +113,6 @@ def ice():
 
 
 ice()
-#fooobar
-#asdf
+#wdifadisbwldislifbasd
+def sample():
+    print("Sample")
