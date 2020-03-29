@@ -84,7 +84,7 @@ def tee():
 
 tee()
 '''
-
+'''
 def ice():
     string =' '
     string1 =' '
@@ -113,3 +113,40 @@ def ice():
 
 
 ice()
+
+'''
+
+def Zed():
+    string = ''
+    string1 = ''
+    string2 = '  '
+    string3 = ''
+    for i in range (0,14):
+        string = string + '*'
+        if i==13:
+            for i in range(0,2):
+                print(string)
+    for i in range(0,5):
+        string1 = string1 + '*'
+        if i ==4:
+            for i in range (0,8):
+                string2= " "
+                string1= string2 + string1
+                print (string1)
+
+
+    for i in range (0,14):
+        string3 = string3 + '*'
+        if i==13:
+            for i in range(0,2):
+                print(string3)
+
+
+Zed()
+
+all good? should I push the code to github?
+#nice
+push itok
+how to change the directory to this python one current?
+cd to thid dir ok
+im on right branch right?
