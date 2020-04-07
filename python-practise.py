@@ -282,7 +282,7 @@ def twoSum(nums, target):
 twoSum([2, 7, 11, 15], 26)
 
 '''
-
+'''
 def Reverse(n):
     #list=[int]
     #list.append(n)
@@ -312,3 +312,164 @@ def Reverse(n):
 
 
 Reverse(123)
+'''
+
+'''
+## 9 Palindrome
+
+s = str(x)
+rs = "".join(list(reversed(s)))
+if rs != s:
+    return False
+return True
+
+'''
+'''
+#-1 solution
+
+def palindrome(str):
+    #str(x)
+    str1=str[::-1]
+    if str==str1:
+        return True
+    else:
+        return False
+
+palindrome(abcde)
+
+'''
+
+
+# 14 largest common prefix
+'''
+def largestcommon(n1,n2,n3):
+    str=n1
+    str2=n2
+    str3=n3
+    str4=''
+    str5=''
+    for i in range(0, len(n1)):
+
+        for j in range(0, len(n2)):
+            #print(n1[i],n2[j])
+            print (i,j)
+            if n1[i]==n2[j]:
+                print(n1[i], n2[j])
+                str4=n1[i]
+                #print(str4)
+                #i+=1
+
+
+largestcommon("donut","dough","dog")
+'''
+
+'''
+def lcp(n1,n2):
+    str1=n1
+    str2=n2
+    str4 = ' '
+    i = 0
+    j = 0
+    if len(n1)>len(n2):
+      while True:
+        if n1[i] == n2[j]:
+            str4 = str4 + n1[i]
+            print(str4)
+        i+=1
+        j+=1
+    else:
+        return False
+
+
+lcp("doughnut","dog")
+
+'''
+
+
+ #'''
+ # for i in range(1, len(str4)):
+ #     for j in range(1, len(n3)):
+ #         if n1[i]==n3[j]:
+ #             str5=n1[i]
+ #             return str5
+ #         else:
+ #             return False
+#
+# print("", str5)
+# '''
+'''
+def Hek():
+    str=""
+    str1=""
+    str2=""
+    for i in range (1,5):
+        str=str + "*"
+    for i in range (1,19):
+        str1=str1 + "*"
+    for i in range (1,11):
+        str2 = str2 + " "
+    for i in range (1,11):
+
+        if i in range (5,7):
+            print(str1)
+        else:
+            print(str+str2+str)
+
+
+Hek()
+'''
+'''
+def H():
+    str=""
+    str1=""
+    for i in range(1, 16):
+        if i <= 5 or i >= 11:
+            str = str + "*"
+        else:
+            str = str + " "
+
+    for i in range (1,16):
+        str1=str1+"*"
+    for i in range (1, 11):
+        if i <5 or i>6:
+         print(str)
+        else:
+            print(str1)
+H()
+'''
+'''
+def H():
+    str = ""
+    str1 = ""
+    for j in range(1, 20):
+
+            str = str + '\n'
+            for i in range(1, 16):
+                if i <= 5 or i >= 11:
+                    str = str + "*"
+                elif j ==10 or j ==11 or j ==12:
+                    str = str + '*'
+                else:
+                    str = str + " "
+
+    print (str)
+
+H()
+'''
+
+def Huk():
+    str = ""
+    str1 = ""
+
+
+    for j in range(1, 20):
+        str = str + '\n'
+        for i in range(1, 26):
+            if i <= 5 or i in range (11,16) or i>20:
+                str = str + "*"
+            elif j == 10 or j == 11 or j == 12:
+                str = str + '*'
+            else:
+                str = str + " "
+    print(str)
+Huk()
