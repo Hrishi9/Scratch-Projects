@@ -1,4 +1,3 @@
-
 '''
 def draw(n="Hrishi"):
     print(n)
@@ -40,7 +39,7 @@ def star(a):
 star(7)
 
 '''
-#just put a digit anjjj
+# just put a digit anjjj
 '''
 class Hrishi(object):
     def print(self, n):
@@ -339,7 +338,6 @@ palindrome(abcde)
 
 '''
 
-
 # 14 largest common prefix
 '''
 def largestcommon(n1,n2,n3):
@@ -385,15 +383,14 @@ lcp("doughnut","dog")
 
 '''
 
-
- #'''
- # for i in range(1, len(str4)):
- #     for j in range(1, len(n3)):
- #         if n1[i]==n3[j]:
- #             str5=n1[i]
- #             return str5
- #         else:
- #             return False
+# '''
+# for i in range(1, len(str4)):
+#     for j in range(1, len(n3)):
+#         if n1[i]==n3[j]:
+#             str5=n1[i]
+#             return str5
+#         else:
+#             return False
 #
 # print("", str5)
 # '''
@@ -456,7 +453,7 @@ def H():
 
 H()
 '''
-
+'''
 def Huk():
     str = ""
     str1 = ""
@@ -464,12 +461,116 @@ def Huk():
 
     for j in range(1, 20):
         str = str + '\n'
-        for i in range(1, 26):
-            if i <= 5 or i in range (11,16) or i>20:
+        for i in range(1, 27):
+            if i <= 5 or i in range (11,16) or i in range (20,25):
                 str = str + "*"
-            elif j == 10 or j == 11 or j == 12:
+            elif j == 10 and i < 15 or j == 11 and i < 15 or j == 12 and i < 15 or j in range (0,3) and i in range (18,27) or j in range (18,20) and i in range (18,27):
                 str = str + '*'
             else:
                 str = str + " "
     print(str)
 Huk()
+
+'''
+
+'''
+
+def Ef():
+    str = ""
+    for i in range (1,20):
+        str = str + '\n'
+        for j in range (1,43):
+            if j<=5 or j in range (24,30):
+               str = str + "*"
+            elif i in range (1,3) and j <20 or i in range (9,11) and j<20 or i in range (18,20) and j<20:
+                str = str + '*'
+            elif i in range(1,3) and j>24 or i in range (9,11) and j>24:
+                str = str + '*'
+            else:
+               str = str + " "
+    print(str)
+Ef()
+
+'''
+
+'''
+
+def Efwhile():
+    str = ""
+    #str1 = ""
+    i=0
+    while i<10:
+        i+=1
+
+    #i==0
+        str = str + '\n'
+        j=0
+        k=0
+        j += 1
+
+        while j<=5:
+
+            str = str + "*"
+            j += 1
+
+
+        while i in range(1,3) and j<15 or i in range (5,7) and j<15 or i in range (9,11) and j<15:
+
+            str = str + "*"
+            j +=1
+
+        #while k in range (0,10):
+        #    str= str + "/"
+        #k+=1
+            #j+=1
+        j+=1
+        while i in range (0,11) and j<19:
+            j+=1
+            str = str + " "
+        while i in range (0,11) and j in range (19,25):
+            j+=1
+            str= str+ "*"
+        while i in range (0,3) and j<35 or i in range (5,7) and j<35:
+            j+=1
+            str= str + '*'
+
+        #i+=1
+    print(str)
+
+        #if i==20:
+         #   break
+Efwhile()
+
+'''
+
+'''
+
+# Leetcode 27
+def removeElement(nums, val):
+    newnum = []
+    for i in range (len(nums)):
+      #  print(nums)
+        if val!=nums[i]:
+            #print(nums)
+            newnum.append(nums[i])
+    print(newnum)
+
+
+removeElement([1,3,5,6,3,2,0,8], 3)
+
+'''
+
+# Leetcode 26
+def removeDuplicate(nums):
+    newnum = []
+    #val
+    for i in range(len(nums)):
+        if nums[i]!=nums[i+1]:
+            newnum.append(nums[i])
+            print(newnum)
+            #print(nums)
+           # newnum.append(nums[i+1])
+           # print(newnum)
+        else:
+            print(newnum)
+removeDuplicate([1,1,1,2,3,3,5])
