@@ -565,12 +565,24 @@ def removeDuplicate(nums):
     newnum = []
     #val
     for i in range(len(nums)):
-        if nums[i]!=nums[i+1]:
-            newnum.append(nums[i])
-            print(newnum)
-            #print(nums)
-           # newnum.append(nums[i+1])
-           # print(newnum)
-        else:
-            print(newnum)
-removeDuplicate([1,1,1,2,3,3,5])
+
+        #if nums[i]!=nums[i+1]:
+            #print (nums[i], nums [i+1])
+
+            try:
+                if nums[i] != nums[i + 1]:
+                    newnum.append(nums[i])
+                    print(newnum)
+                else:
+                    pass
+            except IndexError:
+                newnum.append(nums[i])
+                print(i)
+                print(newnum)
+                break
+
+
+    
+
+
+removeDuplicate([1,1,1,2,3,3,3,5,5,5,6])
