@@ -559,7 +559,7 @@ def removeElement(nums, val):
 removeElement([1,3,5,6,3,2,0,8], 3)
 
 '''
-
+'''
 # Leetcode 26
 def removeDuplicate(nums):
     newnum = []
@@ -586,3 +586,40 @@ def removeDuplicate(nums):
 
 
 removeDuplicate([1,1,1,2,3,3,3,5,5,5,6])
+
+'''
+'''
+def searchInsert(nums, target):
+    for i in nums:
+        if target==i:
+            return (nums.index(i))
+        elif target > nums[-1]:
+            print("in condition")
+            return (len(nums))
+        elif target>i:
+            print ("In continue statement")
+            continue
+        else:
+            print ("In else statement")
+            return (nums.index(i))
+
+
+
+print(searchInsert([1,3,5,5,6],6))
+'''
+'''
+def searchInsert(nums, target):
+    if type(target) == int:
+        for i in nums:
+            if target - i > 0:
+                pass
+            else:
+                return (nums.index(i)), nums
+        return (nums.index(i)+1), target
+    else:
+        return ("Pass a variable in target")
+        #print ("Pass a variable in target")
+
+
+print (searchInsert([1,2,4,5,6], "str"))
+'''
