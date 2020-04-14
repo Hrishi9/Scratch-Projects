@@ -1,0 +1,21 @@
+git branch ##Tells you the current branch
+git status ## tells you the current saved/unsaved files
+
+##To push the code to a branch
+
+git checkout (branch name)--- to change branch
+git checkout -b (branch name)
+(Save all files)
+git add .
+git commit -m 'Commit msg'
+git push
+
+##At start of your day
+git pull (from master and then your branch)
+
+
+
+------------------------------------------
+
+
+
