@@ -614,12 +614,65 @@ def searchInsert(nums, target):
             if target - i > 0:
                 pass
             else:
-                return (nums.index(i)), nums
-        return (nums.index(i)+1), target
+                return (nums.index(i))
+        return (nums.index(i)+1)
     else:
         return ("Pass a variable in target")
         #print ("Pass a variable in target")
 
 
-print (searchInsert([1,2,4,5,6], "str"))
+#print (searchInsert([1,2,4,5,6], 6))
+def insert():
+    index = searchInsert([1, 2, 4, 5, 6], 3)
+    nums = [1, 2, 4, 5, 6]
+    target = 3
+    nums.insert(index, target)
+    print(nums)
+
+insert()
+'''
+'''
+def searchInsertinArray(nums,target):
+        val = []
+        for i in nums:
+            if target-i >0:
+                print(i)
+                val.append(i)
+                #print(val)
+                if i==nums.index[-1]:
+                    val.append(target)
+            elif target-i == 0:
+                val.append(i)
+                val.append(i)
+            else:
+                print ("Else condition")
+                val.append(target)
+                print(val)
+        #print (nums.index(i)+1)
+        #print(val)
+        #find index
+        #append to that index
+
+
+print (searchInsertinArray([1,2,4,5,6],8))
+'''
+'''
+def searchInsertinArray(nums,target):
+    val = []
+    for i in nums:
+        print (i)
+        if target-i > 0 or target-i>0 and target-i<0:
+            val.append(i)
+        elif target-i==0:
+            val.append(i)
+            val.append(i)
+        elif target-i < 0 and (nums.index(i)==0):
+            val.append(target)
+            val.append(i)
+        else:
+            val.append(i)
+    if target-i>0 and nums[::-1]:
+        val.append(target)
+    print(val)
+searchInsertinArray([2,3,6,7],5)
 '''
