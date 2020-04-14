@@ -676,3 +676,5 @@ def searchInsertinArray(nums,target):
     print(val)
 searchInsertinArray([2,3,6,7],5)
 '''
+
+abcdef
