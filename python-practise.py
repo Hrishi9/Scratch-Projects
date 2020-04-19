@@ -676,5 +676,257 @@ def searchInsertinArray(nums,target):
     print(val)
 searchInsertinArray([2,3,6,7],5)
 '''
+'''
+def union():
+    a = [1,2,3,4,5]
+    b = [4,5,6,7,8,9]
 
-abcdef
+    #A = set(a) | set(b)
+    #B = set(a) & set(b)
+
+    print('Union of the arrays:', set(a) | set(b))
+    print('intersection of the arrays:', set(a) & set(b))
+union()
+'''
+
+'''
+# Python 3 program to find
+# n'th term in look and
+# say sequence
+
+# Returns n'th term in
+# look-and-say sequence
+def countnndSay(n):
+    # Base cases
+    if (n == 1):
+        return "1"
+    if (n == 2):
+        return "11"
+
+    # Find n'th term by generating
+    # all terms from 3 to n-1.
+    # Every term is generated using
+    # previous term
+
+    # Initialize previous term
+    s = "11"
+    for i in range(3, n + 1):
+
+        # In below for loop,
+        # previous character is
+        # processed in current
+        # iteration. That is why
+        # a dummy character is
+        # added to make sure that
+        # loop runs one extra iteration.
+        s += '$'
+        l = len(s)
+
+        cnt = 1  # Initialize count
+        # of matching chars
+        tmp = ""  # Initialize i'th
+        # term in series
+        print ("i loop",i,s,cnt,tmp)
+        # Process previous term to
+        # find the next term
+        for j in range(1, l):
+
+            # If current character
+            # does't match
+            if (s[j] != s[j - 1]):
+
+                # Append count of
+                # str[j-1] to temp
+                tmp += str(cnt + 0)
+
+                # Append str[j-1]
+                tmp += s[j - 1]
+
+                # Reset count
+                cnt = 1
+                print("j loop",j, cnt, tmp)
+            # If matches, then increment
+            # count of matching characters
+            else:
+                cnt += 1
+
+        # Update str
+        s = tmp
+    return s;
+
+print(countnndSay(7))
+
+#1 = 1    
+#11 = 2  (one 1)
+#21 = 3 (two 1s)
+#1211 = 4 (one 2 one 1)
+#111221 = 5 (one 1 one 2 two 1)
+#312211 = 6 (three 1 two 2 one 1)
+'''
+
+'''
+class Solution(object):
+    def maxSubArray(self, nums):
+        def dp(nums):
+            n = len(nums)
+            f = [0 for _ in range(n)]
+            print(f)
+            f[0] = nums[0]
+            print (f)
+            for i in range(1, n):
+                print(f[i -1] + nums[i])
+                f[i] = max(f[i-1] + nums[i], nums[i])
+                print("for loop f",f, f[i -1] + nums[i], f[i])
+            return max(f)
+        return dp(nums)
+'''
+'''
+class Solution(object):
+    def maxSubArray(self, nums):
+        n = len(nums)
+        curr = nums[0]
+        ans = nums[0]
+        for i in range(1, n):
+            curr = max(curr + nums[i], nums[i])
+            #(curr = 1 + 1, 1)
+            print ("curr",curr)
+            if curr > ans:
+                ans = curr
+                print ("ans", ans)
+
+x = Solution()
+print(x.maxSubArray([1,3,6,8,-5,86,7,43,5,8,9]))
+ 
+'''
+'''
+def maxAddition(nums):
+   curr = nums[0]
+   prev = nums[0]
+   for i in range(1, len(nums)):
+
+       curr= max(curr + nums[i], nums[i])
+       print ("This is current",curr,"This is previous",prev)
+       if curr > prev:
+           prev = curr
+           print(curr, prev ,"If condition")
+
+maxAddition([1,2,8,-60,5,6,-3])
+
+'''
+'''
+def removedup(nums):
+    a = []
+    b = []
+    prev = 0
+    for i in nums:
+        if i not in b:
+            b.append(i)
+            print(b)
+
+removedup([1,1,2,3,4,1,5,6])
+
+#a=[1,2,3,4,5,5] b=[]
+## if b does not contain element of a, then append to b
+
+'''
+
+#def RemoveDupSortedLinklist(nums):
+
+
+#RemoveDupSortedLinklist([])
+'''
+class Node:
+    def __init__(self, dataval=None):
+        self.dataval = dataval
+        self.nextval = None
+
+class SLinkedList(object):
+    def __init__(self):
+        self.headval = None
+
+# Print the linked list
+def listprint(self):
+    printval = self.headval
+    while printval is not None:
+        print (printval.dataval)
+        printval = printval.nextval
+
+x = SLinkedList
+print(listprint())
+'''
+
+
+class Node:
+
+    def __init__(self, data, nextNode=None):
+        self.data = data
+        self.nextNode = nextNode
+
+
+    def getData(self):
+        return self.data
+
+    def setData(self, val):
+        self.data = val
+
+    def getNextNode(self):
+        return self.nextNode
+
+    def setNextNode(self, val):
+        self.nextNode = val
+
+#[]->[]->[]
+class LinkedList:
+
+
+    def __init__(self, head=None):
+        self.head = head
+        self.size = 0
+
+    def getSize(self):
+        return self.size
+
+    #def addNode(self, data):
+        #newNode = Node(data, self.head)
+        #self.head = newNode
+        #self.size += 1
+        #return True
+
+    def addNode(self, data):
+        newNode = Node(data, self.head)
+        self.head = newNode
+        self.size +=1
+
+    #def printNode(self):
+        #curr = self.head
+
+        #while curr:
+            #print(curr.data)
+            #curr = curr.getNextNode()
+
+    def printNode(self):
+        curr = self.head
+        A= set()
+        while curr:
+
+            A.add(curr.data)
+            curr = curr.getNextNode()
+            print(sorted(A))
+            b=sorted(A)
+            print("this is B: ",b)
+            for i in b:
+
+                print(i)
+
+
+myList = LinkedList()
+print("Inserting")
+print(myList.addNode(5))
+print(myList.addNode(15))
+print(myList.addNode(15))
+print(myList.addNode(25))
+print("Printing")
+myList.printNode()
+print("Size")
+print(myList.getSize())
+
