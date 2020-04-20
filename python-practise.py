@@ -855,6 +855,7 @@ x = SLinkedList
 print(listprint())
 '''
 
+'''
 
 class Node:
 
@@ -930,3 +931,30 @@ myList.printNode()
 print("Size")
 print(myList.getSize())
 
+'''
+'''
+
+def mergearray(nums1,m,nums2,n):
+    print (nums1[m:], nums2[:n])
+    nums1[m:] = nums2[:n]
+    nums1.sort()
+    print (nums1)
+
+mergearray([1,2,3,4,5],3,[2,3,7,8,9],3)
+#1,2,2,3,3,7
+
+'''
+import collections
+
+def SingleNumber(nums):
+        b = collections.Counter(nums)
+        print(b)
+        c= b.items()
+        print(c)
+        for item in c:
+            print (item)
+            if item[1]==1:
+                print("This is the item", item[0])
+
+
+SingleNumber([2,2,7,9,7,3,3,4,4])
