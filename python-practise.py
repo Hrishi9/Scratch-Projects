@@ -944,6 +944,8 @@ mergearray([1,2,3,4,5],3,[2,3,7,8,9],3)
 #1,2,2,3,3,7
 
 '''
+
+'''
 import collections
 
 def SingleNumber(nums):
@@ -958,3 +960,76 @@ def SingleNumber(nums):
 
 
 SingleNumber([2,2,7,9,7,3,3,4,4])
+
+'''
+
+def CollectionsforCount(nums):
+    d={}
+    k=1
+    for i in nums:
+            if i not in d.keys():
+                j = 1
+                print(d.keys())
+                d[i] = k
+            elif i in d.keys():
+                j+=1
+                d[i]= j
+    return d
+
+def singleonly():
+    a = CollectionsforCount([6,1,8,2,2,2,3,4,5,6])
+    print (a)
+    b=1
+    #z= 0
+    e=[]
+    #c = a.items()
+    #print ("This is c", c)
+    for key, value in a.items():
+#store keys in a variable. then iterate over the variable and append to the list.
+        if value>1:
+            print ("This is the value", value)
+            e.append(key)
+            print(e)
+        else:
+            pass
+        print("this is final a ",a)
+    for i in e:
+        del a[i]
+        print ("a",a)
+
+
+    #print("This is c", c)
+
+singleonly()
+
+
+#.keys, values, items
+'''
+def function(nums):
+    j = {}
+    for i in nums:
+        if i not in j.keys():
+            count = 1
+            j[i] = count
+        elif i in j.keys():
+            k  = j.get(i)
+            new_count = k + 1
+            j[i] = new_count
+    return j
+'''
+
+'''
+#[1,5,2,3,4,5,6]
+
+def nonrepeat(nums):
+    b=[]
+    for i in nums:
+        if i not in b:
+            b.append(i)
+        else:
+            pass
+
+    print(b)
+
+nonrepeat([1,5,2,3,4,5,6])
+'''
